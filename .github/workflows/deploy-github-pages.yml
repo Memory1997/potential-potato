@@ -40,11 +40,11 @@ env:
   # ###########################################################################
   #
   # A (short) name, visible in the top (navigation-)bar and in the browser's tab/window-title (and search-engine results)
-  TXT_APP_NAME: Memory Manual
+  TXT_APP_NAME: 'Memory Manual'
   # An absolute/data-URL to an image, visible in the top (navigation-)bar
   TXT_APP_LOGO_URL: ''
   # The first heading, (only) visible on the main-page
-  TXT_MAIN_PAGE_HEADER: Memory Manual
+  TXT_MAIN_PAGE_HEADER: 'Memory Manual'
   # The (optional) introduction text, (only) visible on the main-page.
   # Can be multiple-lines of Markdown syntax or contain some HTML. Newlines need to be specified with `\n` or `<br />`.
   TXT_MAIN_PAGE_INTRO: >- 
@@ -98,7 +98,6 @@ env:
   # The ID of the Google Sheet(s) that contains the content for the region
   REGIONS_SHEET_IDS: >-
    116MBtywUtI4GArq1o2kZHd3BjQsESsoBYXuT5MEjTCw
-
 # #############################################################################
 #
 # See: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
@@ -171,7 +170,7 @@ jobs:
           # See all variables: https://github.com/rodekruis/helpful-information/blob/main/.env.example
           NG_PRODUCTION: 'true'
           GOOGLE_SHEETS_API_KEY: ${{ secrets.GOOGLE_SHEETS_API_KEY }}
-          GOOGLE_SHEETS_API_URL: 'https://console.cloud.google.com/apis/credentials/key/ccdfce73-4aa1-4d87-baa3-fc4bbc9efec1?project=hia-project-490008'   
+          GOOGLE_SHEETS_API_URL: 'https://sheets.googleapis.com/v4/spreadsheets'   
 
       - name: Add generic files
         run: 'cp -r ./public/. www/'
