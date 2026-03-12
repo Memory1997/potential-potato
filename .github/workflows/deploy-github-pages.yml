@@ -47,9 +47,7 @@ env:
   TXT_MAIN_PAGE_HEADER: 'Memory's Manual'
   # The (optional) introduction text, (only) visible on the main-page.
   # Can be multiple-lines of Markdown syntax or contain some HTML. Newlines need to be specified with `\n` or `<br />`.
-  TXT_MAIN_PAGE_INTRO: >- This is an insight into how best i work
-    \n
-    \n
+  TXT_MAIN_PAGE_INTRO: >- 'This is an insight into how best i work'
   #
   # An (optional) notice on the top of the screen, can be overwritten on sub-pages per-region by each region's sheet.
   TXT_MAIN_PAGE_NOTICE: ''
