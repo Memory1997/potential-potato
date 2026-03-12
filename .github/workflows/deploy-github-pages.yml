@@ -98,7 +98,7 @@ env:
     Information
   # The ID of the Google Sheet(s) that contains the content for the region
   REGIONS_SHEET_IDS: >-
-    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   116MBtywUtI4GArq1o2kZHd3BjQsESsoBYXuT5MEjTCw
 
 # #############################################################################
 #
@@ -136,9 +136,9 @@ jobs:
 
     steps:
       - name: Verify ENV configuration
-        if: env.REGIONS_SHEET_IDS == 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+        if: env.REGIONS_SHEET_IDS == '116MBtywUtI4GArq1o2kZHd3BjQsESsoBYXuT5MEjTCw'
         run: |
-          echo "⚠️ Set the appropriate Google Spreadsheet ID in \`REGIONS_SHEET_IDS\`, instead of the default/placeholder-value: \`xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\`" >> $GITHUB_STEP_SUMMARY
+          echo "⚠️ Set the appropriate Google Spreadsheet ID in \`REGIONS_SHEET_IDS\`, instead of the default/placeholder-value: \`116MBtywUtI4GArq1o2kZHd3BjQsESsoBYXuT5MEjTCw\`" >> $GITHUB_STEP_SUMMARY
           echo "Edit [\`.github/workflows/deploy-github-pages.yml\`](../../edit/main/.github/workflows/deploy-github-pages.yml) to fix." >> $GITHUB_STEP_SUMMARY
           echo "::error file=.github/workflows/deploy-github-pages.yml::Please change the ENV configuration to real-world values" && exit 1
 
@@ -172,7 +172,7 @@ jobs:
           # See all variables: https://github.com/rodekruis/helpful-information/blob/main/.env.example
           NG_PRODUCTION: 'true'
           GOOGLE_SHEETS_API_KEY: ${{ secrets.GOOGLE_SHEETS_API_KEY }}
-          GOOGLE_SHEETS_API_URL: '116MBtywUtI4GArq1o2kZHd3BjQsESsoBYXuT5MEjTCw'   
+          GOOGLE_SHEETS_API_URL: 'https://console.cloud.google.com/apis/credentials/key/ccdfce73-4aa1-4d87-baa3-fc4bbc9efec1?project=hia-project-490008'   
 
       - name: Add generic files
         run: 'cp -r ./public/. www/'
